@@ -1,0 +1,127 @@
+var num =-50;
+var num1 = "99";
+var num3= parseInt(num1);
+var num4= Math.abs(num);
+var num2 = num4+num3;
+console.log("Summation of two number is = "+num2);
+
+var date = new Date();//Date class
+
+var date1= date.toDateString();
+console.log("Today's date is  = "+date1);
+
+var date2 =date.toLocaleDateString();
+console.log("Today's date is  = "+date2);
+
+var time = date.toTimeString();
+console.log("Today's time is  = "+time);
+
+var time1 = date.toLocaleTimeString();
+console.log("Today's local time is  = "+time1);
+
+var date3 = date.getMonth()+1;
+console.log("Current month is  = "+date3);
+
+var min = date.getMinutes();
+console.log("Current Minute is  = "+min);
+
+var sec = date.getMilliseconds();
+console.log("Current Milisecond is  = "+sec);
+
+var arr = ["samir","Faisal","Miran","Abrar","Aziz"];
+console.log(arr[3]);
+arr.splice(0,2, "Samir Faisal Riad");
+console.log(arr);
+var arr1 = arr.slice(2,4);
+console.log(arr1);
+
+var MyInfo={name:"Samir",age:22,versity:"AIUB"};
+console.log(MyInfo.versity);
+
+function Myinfo(name,age,versity){
+    this.name=name;
+    this.age=age;
+    this.versity=versity;
+}
+var newob = new Myinfo("Faisal",24,"AIUB");
+var newob = new Myinfo("Fahad",24,"BGMEA");
+console.log(newob);
+
+function Myinfo2(name,age,versity){//Parameterised constructor
+    this.name=name;
+    this.age=age;
+    this.versity=versity;
+    this.show = function(){//Details printable type function
+        console.log(this.name,this.age,this.versity);
+        console.log(this.name);
+        console.log(this.age);
+        console.log(this.versity);
+    }
+}
+var newob = new Myinfo2("Riad",24,"AIUB");
+var newob1 = new Myinfo2("Tasu",24,"GST");
+newob.show();
+newob1.show();
+// Ternary Operation in JavaScript
+var number1=50;
+var number2=40;
+var ternariOperation = (number1 > number2)? "Number1 is greater than number2" : "Number2 is greater than number1";
+console.log(ternariOperation);
+
+//Function use for print
+
+function SamInfo(name,age,versity,address){
+    this.name=name;
+    this.age=age;
+    this.versity=versity;
+    this.address=address;
+    this.Printall = function(){
+        console.log("Name: "+name,"Age: "+age,"University: "+versity,"Address: "+address);
+
+    }
+}
+var obj1= new SamInfo("Utsho",23,"AIUB","Nikunjo");
+var obj2= new SamInfo("Shuvo",24,"Brac","Opposite of Jamuna");
+
+obj1.Printall();
+obj2.Printall();
+
+//Ternary operator
+var con = (30>50)? "30 is greater" : "50 is greater";
+console.log(con);
+
+//break 
+for(var i=0;i<10;i++)
+{
+    if( i== 6 )
+    {
+        console.log("Break here");
+        break;
+    }
+    console.log(i);
+}
+//continue
+for(var i=0;i<10;i++)
+{
+    if( i== 6 )
+    {
+        console.log("continue");
+        continue;
+    }
+    console.log(i);
+}
+    
+//Function Epression
+
+function Samir()//normal function
+{
+    console.log("My name is Samir");
+}
+Samir();
+
+var funcVariable = function(name,age){
+    console.log(name,age);
+}
+funcVariable("Abrar",25);
+funcVariable("Nasum",37);
+    
