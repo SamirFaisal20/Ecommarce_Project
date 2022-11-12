@@ -1,0 +1,340 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+}
+.container .logo a{
+    text-decoration: none;
+}
+.logo{
+    position: absolute;
+    top: 50px;
+    left: 90px;
+}
+.container a{
+    text-shadow: 2px 2px 30px rgb(62, 60, 60);
+    font-weight: bold;
+    color: black;
+    font-size: 2rem;
+    letter-spacing: 1;
+}
+.searcharea {
+    position: fixed;
+    top: 50px;
+    right: 90px;
+    width: 170px;
+    height: 45px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+    box-shadow: 1px 1px 10px rgb(149, 138, 174);
+    box-sizing: border-box;
+    z-index: 1;
+    border: 1px solid rgb(238, 236, 240);
+    outline: none;
+    cursor: pointer;
+}
+.searcharea input{
+    width: 90px;
+    height: 20px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+    color: black;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    padding: 0px 10px;
+}
+.searcharea .search::placeholder{
+    color: black;
+    font-weight: 400;
+    letter-spacing: 2px;
+    font-size: 0.8rem;
+    font-family: poppins;
+}
+.section1{
+    position: absolute;
+    left: 15%;
+    top: 50%;
+    transform: translate(-15%,-50%);
+}
+.section1 img{
+    height: 300px;
+}
+.section1button{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+    transform: translate(-90%,-50%);
+}
+.section1button h1{
+    font-family: roboto;
+    font-weight: bold;
+    margin: 0;
+    line-height: 60px;
+    font-size: 4rem;
+    text-shadow: 1px 1px 5px rgb(8, 0, 16);
+    letter-spacing: 3px;
+    color: rgb(19, 10, 29);
+    text-transform: uppercase;
+}
+.section1button .color{
+    color: rgb(156, 77, 230);
+}
+.btn{
+    width: 150px;
+    height: 40px;
+    background-color: rgb(19, 10, 29);
+    color: white;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1rem;
+    letter-spacing: 0.5px;
+    outline: none;
+    cursor: pointer;
+    border: transparent !important;
+    border-radius: 30px;
+}
+.btn:hover{
+    background-color: rgb(58, 33, 87);
+}
+.iconarea{
+    position: fixed;
+    left: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.2);
+    padding: 5px 0px;
+    z-index: 1;
+    border-radius: 20px;
+}
+.iconarea a{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 15px;
+}
+.iconarea img{
+    height: 20px;
+}
+.productsection {
+    width: 85%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 30px auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin-top: -150px;
+    position: relative;
+    background-size: 1000px;
+    border-radius: 10px;
+}
+.productsection h3{
+    margin: 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    font-family: myriad pro;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 2rem;
+    color: #323543;
+}
+.productsection .color{
+    color: rgb(156, 77, 230);
+}
+.product{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 0px;
+    width: 100%;
+}
+.productBox{
+    width: 250px;
+    height: 330px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 8px;
+    position: relative;
+    margin: 10px 30px;
+}
+.productBox img{
+    height: 180px;
+}
+.productBox p{
+    color: #4d4d4d70;
+    font-family: myriad pro;
+    font-size: 0.9rem;
+    letter-spacing: 0.5;
+}
+.productBox a{
+    color: #2c2c2c;
+    font-family: poppins;
+    font-size: 1rem;
+    text-decoration: none;
+}
+.cartbtn{
+    position: absolute;
+    width: 140px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: calibri;
+    left: 50%;
+    bottom: -20px;
+    transform: translateX(-50%);
+    border-radius: 15% 15% 15% 15% / 50% 50% 50% 50%;
+    background: linear-gradient(120deg,#6b60ec 20%,#a166f4);
+    color: #FFFFFF;
+    display: none;
+    animation: fade 0.2s;
+}
+.productBox:hover{
+    box-shadow: 1px 1px 10px rgb(239, 225, 225);
+    background-color: rgb(255, 255, 255);
+}
+.productBox:hover .cartbtn{
+    display: flex;
+}
+.aboutus{
+    display: flex;
+    width: 84%;
+    margin: 30px auto;
+    justify-content: space-around;
+    align-items: center;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+.writing{
+    width: 40%;
+    font-family: myriad pro;;
+}
+.writing img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.writing h1{
+    color: #333333;
+    font-weight: 700;
+    font-size: 3rem;
+    margin: 0px;
+}
+.writing h4{
+    color: #333333;
+    font-weight: 400;
+    font-size: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.writing .color{
+    color: rgb(156, 77, 230);
+}
+.writing p{
+    font-size: 1rem;
+    color: #bdbdbd;
+    letter-spacing: 0.5px;
+}
+.watchsection{
+    width: 85%;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    margin: 30px auto;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    margin-top: 0px;
+    position: relative;
+    background-size: 1000px;
+    border-radius: 10px;
+}
+.watchsection h3{
+    margin: 20px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.05);
+    font-family: myriad pro;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 2rem;
+    color: #323543;
+}
+.watchsection .color{
+    color: rgb(156, 77, 230);
+}
+.submission{
+    width: 100%;
+    height: 250px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid rgba(0, 0, 0, 0.03);
+}
+.submission h3{
+    font-size: 1.3rem;
+    color: rgb(56, 56, 56);
+    font-weight: bold;
+}
+
+.searchbox{
+    width: 500px;
+    height: 60px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10% 10% 10% 10% / 50% 50% 50% 50%;
+    box-shadow: 1px 1px 50px rgb(217, 215, 223);
+    margin-top: 30px;
+}
+.searchbox input{
+    width: 100%;
+    height: 40px;
+    margin-left: 25px;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+.searchbtn{
+    width: 120px;
+    margin-right: 25px;
+    height: 40px;
+    background-color: #202020;
+    border-radius: 20px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    box-shadow: 2px 2px 30px rgb(0 0 0 / 10%);
+    font-size: 1rem;
+    text-decoration: none;
+}
+.searchbtn:hover{
+    background-color: #6b60ec;
+    transition: all ease;
+    border: none;
+    outline: none;
+}
