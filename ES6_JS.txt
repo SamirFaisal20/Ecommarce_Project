@@ -1,0 +1,210 @@
+function print(...msg)
+{
+    console.log(msg);
+}
+print("Hello","This is","samir","Faisal");
+
+function about(...message){
+    message.push("Reyad");
+    console.log(message);
+}
+about("Samir","Faisal");
+
+function about1(...point){
+    point.push("Reyad");
+    point.push("Abrar");
+    point.shift();
+    console.log(point);
+}
+about1("Samir","Faisal");
+
+function about2(...point1){
+    point1.push("Reyad");
+    point1.push("Abrar");
+    point1.unshift("Kochi");
+    console.log(point1);
+}
+about2("Samir","Faisal");
+
+function printall(name,address){
+    return{
+        name,
+        address
+    }
+}
+console.log(printall("Samir","Malotinagor,bogura"));
+
+//for of loop
+var sam=[10,20,30,40,50,60];
+for(newsam of sam)
+{
+    console.log(newsam);
+}
+console.log("for in arry us for knowing array index")
+//for in arry us for knowing array index
+var ss= [20,30,40,50,60,70];
+for(var s in ss)
+{
+    console.log(s);
+}
+console.log("For in object")
+
+var object1 ={
+    name:"samir",
+    Address:"Bogura",
+    age:22,
+    scl:"BZS"
+}
+for(var newobj in object1)
+{
+    console.log(newobj);
+}
+
+var name2="samir";
+var add="bogura";
+console.log(`My name is ${name2}, I am from ${add}`);
+///array destructing
+const arraysam = [1,3,5,7,9,11,13,15,17,19];
+let [a,b,c,...z]= arraysam;
+console.log(` full array is ${a} ${b} ${c} ${z}`);
+//object destructaring
+const samirfas = {
+    Name:"Samir",
+    Age: 23,
+    Address: "Malotinagor"
+}
+const {Name,Age,Address} = samirfas;
+console.log(`My name is ${Name}, Now i am ${Age} years old and My home address is ${Address}`);
+
+//static function
+class Book{
+    static details(name,id,author){
+        name="Rich dad poor dad";
+        id="RDPD-1";
+        author="SamFas";
+        console.log(`Name of the book is ${name}, Id of this book is ${id},Name of this book's author is ${author}`);
+    }
+}
+Book.details();
+//class inherit and super using
+class Parents{
+    Father_Asset(address,amountOfLand){
+        this.address= address;
+        this.amountOfLand=amountOfLand;
+        console.log(`From my father , i will get ${amountOfLand} amount of land in  ${address} area`);
+    }
+    Mother_Asset(address1,amountOfLand1){
+        this.address= address1;
+        this.amountOfLand=amountOfLand1;
+        console.log(`From my mother , i will get ${amountOfLand1} amount of land in  ${address1} area`);
+    }
+}
+class Me extends Parents{
+    MyAsset(){
+        super.Father_Asset("Malotinagor",24);
+        super.Mother_Asset("Dhaka college",30);
+    }
+}
+let pro = new Me();
+// pro.Father_Asset("malotinagor",24);
+// pro.Mother_Asset("Dhaka College",32);
+pro.MyAsset();
+
+//arraw function
+
+var func = (a,b)=>{
+    return a+b;
+}
+console.log(func(30,5));
+//one line arraw function
+
+var samfunc=(a,b)=> a*b;
+console.log(`result of the multiplication is ${samfunc(5,9)}`);
+//symbole using(it is generating unique value only)
+var cat = Symbol("sam");
+var cat1 = Symbol("sam");
+console.log(cat == cat1);
+//strict mode
+//use strict is using for better understanding.
+//foreach
+var sam2=[1,4,11,22,44,55];
+sam2.forEach(x=>console.log(x));
+//one array's value store in another empty array
+console.log("*****");
+var sa=[2,4,6,8];
+var sa1=sa.map((x)=>console.log(x*2));
+//array filteration
+var ar=[17,16,18,19,20];
+var aar1=ar.filter(fun);
+function fun(x){
+    return x>17;
+}
+console.log(aar1);
+//callback function uses
+var arrr=(msg)=>{
+    console.log(msg);
+}
+var arrr1=(name,id,CallBackfunction)=>{
+    var details=`My name is ${name},I read is class ${id}`;
+    CallBackfunction(details);
+}
+arrr1("samir",11,arrr)
+//error handaling
+try{
+    console.log("First comment");
+    console.log(num);
+}catch(errortrace){
+    //console.log(errortrace.message);
+    console.log("Number define first");
+}
+finally{
+    console.log(20+30);
+}
+//promise uses in js
+var messages=true;
+var promise=new Promise((resolve,reject)=>{
+    if(messages){
+        resolve([
+            {name:"Samir",address:"Malotinagor"},
+            {name:"Abrar",address:"khulna"}
+        ])
+    }else{
+        reject("User is not registered");
+    }
+})
+promise.then((s)=>{
+    console.log(s);
+})
+promise.catch((error)=>{
+    console.log(error);
+})
+//Async Await
+function print(userid){
+    return new Promise((resolve,reject)=>{
+        console.log("Get user from the database");
+        setTimeout(()=>{
+            resolve({
+                userid: userid,
+                usename:"Samir Faisal"
+            });
+
+        },1000);
+    })
+}
+function getprint(use){
+    return new Promise((resolve,reject)=>{
+        console.log(`Username is ${use.usename}`);
+        setTimeout(()=>{
+            resolve(['email','CDN','Vpn']);
+        },2*1000);
+    })
+}
+
+function getcost(cost){
+    return new Promise((resolve,reject)=>{
+        console.log(`cost is ${cost}`);
+        setTimeout(()=>{
+            resolve(cost.length*100);
+        },3*1000);
+    })
+}
