@@ -1,0 +1,24 @@
+//list value insert from the array
+var language= document.querySelector(".language");
+language.innerHTML="<h2>This is the list of language</h2>";
+var arr=["c++","Java","c#","Python","Ruby"];
+let fragment = document.createDocumentFragment();
+arr.forEach(lan=>{
+    var li= document.createElement("li");
+    li.textContent=lan;
+    fragment.appendChild(li);
+})
+language.appendChild(fragment);
+// Dom manupulation
+var first = document.querySelector("#first");
+var functionstyle=(name)=>{
+    var litagename = document.createElement("li");
+    litagename.textContent=name;
+    return litagename;
+}
+first.appendChild(functionstyle("NID"));
+first.appendChild(functionstyle("Phone"));
+first.appendChild(functionstyle("Password"));
+//Dom manipulation using innerHtml
+var second = document.querySelector(".innertext");
+second.innerHTML="<p> This is innerHtml tag </p><div><li>Home</li><li>About Us</li><li>Create</li></div>";
